@@ -11,7 +11,8 @@ struct collage
 
 int main()
 {
-
+    FILE *z;
+    z = fopen("rough data.txt", "w");
     int a, b, c;
 
     struct collage kkr;
@@ -77,38 +78,40 @@ int main()
         printf("\n");
     }
 
-    printf("student details\n");
+    fprintf(z, "student details\n");
 
     for (int i = 0; i < a; i++)
     {
-        printf("name is %s\n", kkr.name[0][i]);
-        printf("age is %d\n", kkr.age[0][i]);
-        printf("branch is %s\n", kkr.branch[0][i]);
+        fprintf(z, "  name :%s\n", kkr.name[0][i]);
+        fprintf(z, "   age :%d\n", kkr.age[0][i]);
+        fprintf(z, "branch :%s\n", kkr.branch[0][i]);
 
-        printf("\n");
+        fprintf(z, "\n");
     }
 
-    printf("teachers details\n");
+    fprintf(z, "teachers details\n");
 
     for (int i = 0; i < b; i++)
     {
-        printf("name is %s\n", kkr.name[1][i]);
-        printf("age is %d\n", kkr.age[1][i]);
-        printf("subject is %s\n", kkr.branch[1][i]);
+        fprintf(z, "   name :%s\n", kkr.name[1][i]);
+        fprintf(z, "    age :%d\n", kkr.age[1][i]);
+        fprintf(z, "subject :%s\n", kkr.branch[1][i]);
 
-        printf("\n");
+        fprintf(z, "\n");
     }
 
-    printf("other staff details\n");
+    fprintf(z, "other staff details\n");
 
     for (int i = 0; i < c; i++)
     {
-        printf("name is %s\n", kkr.name[2][i]);
-        printf("age is %d\n", kkr.age[2][i]);
-        printf("work is %s\n", kkr.branch[2][i]);
+        fprintf(z, "name :%s\n", kkr.name[2][i]);
+        fprintf(z, " age :%d\n", kkr.age[2][i]);
+        fprintf(z, "work :%s\n", kkr.branch[2][i]);
 
-        printf("\n");
+        fprintf(z, "\n");
     }
+
+    fclose(z);
 
     return 0;
 }
