@@ -14,9 +14,10 @@ int main ()
       count +=1;
     }
   
-  printf("%d" , count);
+  printf("there are %d words in this word" , count);
 
   return 0;
 }
+
 
   
